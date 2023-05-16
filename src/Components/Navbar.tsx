@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "../Contants/Constant";
-import { HiMenuAlt3, HiOutlineX, HiMenuAlt1 } from "react-icons/hi";
-import styles from "../style";
+import { HiMenuAlt3, HiOutlineX } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
@@ -23,7 +23,8 @@ const Navbar = () => {
                 setActive(nav.title);
               }}
             >
-              {nav.title}
+              {/* {nav.title} */}
+              <Link to={nav.id}>{nav.title}</Link>
             </li>
           ))}
         </ul>
@@ -59,7 +60,8 @@ const Navbar = () => {
                   } ${index === NavLink.length - 1 ? "mb-0" : "mb-4"}`}
                   onClick={() => setActive(nav.title)}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  {/* <a href={`#${nav.id}`}>{nav.title}</a> */}
+                  <Link to={nav.id}>{nav.title}</Link>
                 </li>
               ))}
             </ul>

@@ -8,14 +8,13 @@ const links = [
 ];
 const stats = [
   { name: "Offices worldwide", value: "12" },
-  { name: "Full-time colleagues", value: "300+" },
+  { name: "Downloads", value: "300+" },
   { name: "Hours per week", value: "40" },
   { name: "Paid time off", value: "Unlimited" },
 ];
-
-export default function Hero() {
+const Hero = () => {
   return (
-    <div className="relative isolate overflow-hidden bg-noexBlack py-24 sm:py-32">
+    <div className="relative isolate overflow-hidden bg-noexBlack py-24 sm:py-32 h-screen">
       <img
         src={`${process.env.PUBLIC_URL}/assets/noex-g.webp`}
         alt=""
@@ -92,4 +91,5 @@ export default function Hero() {
       </div>
     </div>
   );
-}
+};
+export default Hero;
