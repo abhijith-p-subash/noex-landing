@@ -8,7 +8,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <nav>
-      <div className=" w-full flex py-4 justify-between items-center navbar bg-opacity-10 container mx-auto">
+      <div className="shadow max-w-screen-xl w-full flex py-4 justify-between items-center navbar bg-opacity-10 container mx-auto">
         <h1 className="font-bold text-3xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
           NOEX
         </h1>
