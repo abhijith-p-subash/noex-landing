@@ -1,14 +1,17 @@
 import { Fragment, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+
 import { NavLink } from "../Contants/Constant";
-import { Link } from "react-router-dom";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [active, setActive] = useState("Home");
   return (
     <Disclosure as="nav" className="bg-noexBlack">
@@ -29,7 +32,10 @@ const Navbar = () => {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <h1 className="font-bold text-3xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                  <h1
+                    onClick={() => navigate("/")}
+                    className="font-bold text-3xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary cursor-pointer"
+                  >
                     NOEX
                   </h1>
                   {/* <img
