@@ -47,7 +47,7 @@ const Hero = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Hello{" "}
+            Hello,
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
               NOEX
             </span>{" "}
@@ -69,11 +69,14 @@ const Hero = () => {
         </div>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-            {links.map((link) => (
+            <button className="btn btn-primary">Documentions</button>
+            <button className="btn btn-noex-white-outline">Source Code</button>
+            {/* <button className="btn btn-primary-outline">Buy Me a Coffee</button> */}
+            {/* {links.map((link) => (
               <a key={link.name} href={link.href}>
                 {link.name} <span aria-hidden="true">&rarr;</span>
               </a>
-            ))}
+            ))} */}
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (

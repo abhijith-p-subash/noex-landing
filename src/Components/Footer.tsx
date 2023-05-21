@@ -51,7 +51,7 @@ const Footer = () => {
               </li>
             ))}
             <li>
-              <button className="flex bg-primary gap-2 p-3 rounded-lg items-center">
+              <button className="flex btn btn-primary items-center">
                 <SiBuymeacoffee className="text-lg" /> Buy Me a Coffee
               </button>
             </li>

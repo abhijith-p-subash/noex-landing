@@ -16,6 +16,58 @@ code {
     monospace;
 } */
 
+@layer utilities {
+  .btn {
+    padding: 0.75rem;
+    border-radius: 10px;
+  }
+  .btn-primary {
+    background-color: #00adb5;
+    border: #00adb5 1px solid;
+  }
+
+  .btn-primary:hover {
+    border: #00adb5 1px solid;
+    color: #00adb5;
+    background-color: transparent;
+    transition: ease-in-out 0.5s;
+  }
+
+  .btn-noex-white {
+    background-color: #eeeeee;
+    border: #eeeeee 1px solid;
+    color: #222831;
+  }
+
+  .btn-noex-white:hover {
+    border: #eeeeee 1px solid;
+    color: #eeeeee;
+    background-color: transparent;
+    transition: ease-in-out 0.5s;
+  }
+
+  .btn-primary-outline {
+    border: #00adb5 1px solid;
+    color: #00adb5;
+  }
+  .btn-primary-outline:hover {
+    background-color: #00adb5;
+    color: #fff;
+    transition: ease-in-out 0.5s;
+  }
+
+  .btn-noex-white-outline {
+    border: #eeee 1px solid;
+    color: #eeee;
+    background-color: transparent;
+  }
+  .btn-noex-white-outline:hover {
+    background-color: #eee;
+    color: #222831;
+    transition: ease-in-out 0.5s;
+  }
+}
+
 /* Scrollbar Track */
 ::-webkit-scrollbar {
   width: 8px; /* Width of the scrollbar */
