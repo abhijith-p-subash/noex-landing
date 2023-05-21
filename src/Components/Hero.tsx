@@ -1,11 +1,15 @@
-import { MdOutlineContentCopy } from "react-icons/md";
+/* eslint-disable jsx-a11y/anchor-has-content */
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const links = [
-  { name: "Open roles", href: "#" },
-  { name: "Internship program", href: "#" },
-  { name: "Our values", href: "#" },
-  { name: "Meet our leadership", href: "#" },
-];
+import { MdOutlineContentCopy } from "react-icons/md";
+import { AiOutlineGithub } from "react-icons/ai";
+// const links = [
+//   { name: "Open roles", href: "#" },
+//   { name: "Internship program", href: "#" },
+//   { name: "Our values", href: "#" },
+//   { name: "Meet our leadership", href: "#" },
+// ];
 const stats = [
   { name: "Offices worldwide", value: "12" },
   { name: "Downloads", value: "300+" },
@@ -13,6 +17,16 @@ const stats = [
   { name: "Paid time off", value: "Unlimited" },
 ];
 const Hero = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [copy, setCopy] = useState(false);
+  const navigate = useNavigate();
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("npm install -g noex-cli");
+    setCopy(true);
+    alert("copied");
+  };
+
   return (
     <div className="relative isolate overflow-hidden bg-noexBlack py-24 sm:py-32 h-screen">
       <img
@@ -59,18 +73,32 @@ const Hero = () => {
             while ensuring ironclad protection and limitless growth.
           </p>
         </div>
-        <div className="bg-noexBlack bg-opacity-70 rounded-lg p-4 flex items-center justify-between mt-2 lg:w-1/2 md:w-1/2 xs:w-full mx-auto max-w-2xl lg:mx-0">
+        <div className="bg-noexBlack bg-opacity-70 rounded-lg p-4 flex items-center justify-between mt-6 lg:w-1/2 md:w-1/2 xs:w-full mx-auto max-w-2xl lg:mx-0">
           <p className="font-bold text-primary text-lg">
             npm install -g noex-cli
           </p>
-          <button className=" hover:text-primary">
+          <button className=" hover:text-primary" onClick={() => handleCopy()}>
             <MdOutlineContentCopy className="text-xl" />
           </button>
         </div>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-            <button className="btn btn-primary">Documentions</button>
-            <button className="btn btn-noex-white-outline">Source Code</button>
+            <button
+              onClick={() => navigate("/docs")}
+              className="btn btn-primary"
+            >
+              Documentions
+            </button>
+
+            <a
+              href="https://github.com/sixbeeshades/nox_framework"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 btn btn-noex-white-outline"
+            >
+              <AiOutlineGithub /> Source Code
+            </a>
+
             {/* <button className="btn btn-primary-outline">Buy Me a Coffee</button> */}
             {/* {links.map((link) => (
               <a key={link.name} href={link.href}>
