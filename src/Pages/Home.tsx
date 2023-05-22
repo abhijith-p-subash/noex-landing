@@ -4,6 +4,7 @@ import Lottie from "lottie-react";
 
 import Hero from "../Components/Hero";
 import Features from "../Components/Features";
+// import Testmonial from "../Components/Testmonial";
 import technology from "../Contants/Lottie/technology.json";
 
 const Home = () => {
@@ -39,6 +40,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* TESTIMONIAL */}
+      {/* <Testmonial /> */}
       {/* SUPPORT US */}
       <div>
         <div className="overflow-hidden bg-gray-900 py-24 sm:py-32">
