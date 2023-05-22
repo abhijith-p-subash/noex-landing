@@ -1,26 +1,15 @@
 // import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import {
-  AiOutlineArrowUp,
   AiOutlineLock,
-  AiOutlineCloudServer,
+  AiOutlineExpandAlt,
+  AiFillDatabase,
 } from "react-icons/ai";
 
 const features = [
   {
-    name: "Push to deploy.",
+    name: "Security Features.",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: (
-      <AiOutlineArrowUp
-        className="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-        aria-hidden="true"
-      />
-    ),
-  },
-  {
-    name: "SSL certificates.",
-    description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+      "Noex-CLI includes built-in security features to help developers create secure web applications. It includes best practices for securing Express applications, such as helmet middleware for setting secure HTTP headers, csrf protection, and XSS prevention.",
     icon: (
       <AiOutlineLock
         className="absolute left-1 top-1 h-5 w-5 text-indigo-600"
@@ -29,11 +18,22 @@ const features = [
     ),
   },
   {
-    name: "Database backups.",
+    name: "Database Management.",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+      "Noex-CLI simplifies database management in Noex applications. It includes pre-configured options for popular databases like MongoDB and MySQL making it easy to set up and configure database connections.",
     icon: (
-      <AiOutlineCloudServer
+      <AiFillDatabase
+        className="absolute left-1 top-1 h-5 w-5 text-indigo-600"
+        aria-hidden="true"
+      />
+    ),
+  },
+  {
+    name: "Scalability",
+    description:
+      "Noex-CLI is designed with scalability in mind, allowing developers to easily create scalable web applications. It provides a modular architecture, making it easy to add and configure components like routers, controllers, and services.",
+    icon: (
+      <AiOutlineExpandAlt
         className="absolute left-1 top-1 h-5 w-5 text-indigo-600"
         aria-hidden="true"
       />
@@ -55,9 +55,11 @@ const Features = () => {
                 A better workflow
               </p>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
+                Noex-CLI is a powerful command-line tool for creating and
+                managing Noex applications, which are built on top of Node.js
+                and Express. It provides a streamlined workflow for developers
+                to create robust and scalable web applications, with built-in
+                features for security and database management.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
