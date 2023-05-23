@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { MdOutlineContentCopy } from "react-icons/md";
 import { AiOutlineGithub } from "react-icons/ai";
+import { FaNpm } from "react-icons/fa";
 // const links = [
 //   { name: "Open roles", href: "#" },
 //   { name: "Internship program", href: "#" },
@@ -11,20 +12,19 @@ import { AiOutlineGithub } from "react-icons/ai";
 //   { name: "Meet our leadership", href: "#" },
 // ];
 const stats = [
-  { name: "Offices worldwide", value: "12" },
+  { name: "Security & Scalability", value: "100%" },
   { name: "Downloads", value: "300+" },
-  { name: "Hours per week", value: "40" },
-  { name: "Paid time off", value: "Unlimited" },
+  { name: "Configuration Time", value: "<3" },
+  { name: "Open Source", value: "Unlimited" },
 ];
 const Hero = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [copy, setCopy] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleCopy = () => {
     navigator.clipboard.writeText("npm install -g noex-cli");
     setCopy(true);
-    alert("copied");
   };
 
   return (
@@ -83,12 +83,21 @@ const Hero = () => {
         </div>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-            <button
+            {/* <button
               onClick={() => navigate("/docs")}
               className="btn btn-primary"
             >
               Documentions
-            </button>
+            </button> */}
+
+            <a
+              href="https://github.com/sixbeeshades/nox_framework"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 btn btn-primary"
+            >
+              <FaNpm /> Npm Package
+            </a>
 
             <a
               href="https://github.com/sixbeeshades/nox_framework"
@@ -98,6 +107,12 @@ const Hero = () => {
             >
               <AiOutlineGithub /> Source Code
             </a>
+            {/* <div className="flex flex-col-reverse">
+              <dt className="text-base leading-7 text-gray-300">Downloads</dt>
+              <dd className="text-2xl font-bold leading-9 tracking-tight text-white">
+                300+
+              </dd>
+            </div> */}
 
             {/* <button className="btn btn-primary-outline">Buy Me a Coffee</button> */}
             {/* {links.map((link) => (
@@ -106,18 +121,20 @@ const Hero = () => {
               </a>
             ))} */}
           </div>
-          <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.name} className="flex flex-col-reverse">
-                <dt className="text-base leading-7 text-gray-300">
-                  {stat.name}
-                </dt>
-                <dd className="text-2xl font-bold leading-9 tracking-tight text-white">
-                  {stat.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
+          <div className="hidden lg:block">
+            <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4 ">
+              {stats.map((stat) => (
+                <div key={stat.name} className="flex flex-col-reverse">
+                  <dt className="text-base leading-7 text-gray-300">
+                    {stat.name}
+                  </dt>
+                  <dd className="text-2xl font-bold leading-9 tracking-tight text-white">
+                    {stat.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
       </div>
     </div>

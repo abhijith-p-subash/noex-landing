@@ -78,8 +78,9 @@ const Features = () => {
               </dl>
             </div>
           </div>
+          {/* src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png" */}
           <img
-            src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+            src="https://assets.toptal.io/images?url=https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1129677/regular_1708x683_0604-nodeos-the-javascript-based-operating-system-Waldek_Newsletter-ef506c21c0db1d42e9abd7a8180e98eb.png"
             alt="Product screenshot"
             className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
             width={2432}
