@@ -91,7 +91,7 @@ const Hero = () => {
             </button> */}
 
             <a
-              href="https://github.com/sixbeeshades/nox_framework"
+              href="https://www.npmjs.com/package/noex-cli?activeTab=readme"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 btn btn-primary"
