@@ -53,6 +53,18 @@ const Home = () => {
               </h1>
               <div className="lg:mx-10 xs:mx-0 my-4">
                 <p className="text-lg">Create a new Noex application:</p>
+                <br />
+                <p>
+                  You can create a project with different Database
+                  configurations using NOEX-CLI. It allows you to create a
+                  MongoDB project where all the modules and newly created
+                  modules are based on MongoDB. However, creating a MySQL
+                  project alone is not supported because the user login logs and
+                  all other logs are kept in MongoDB. During module creation,
+                  you can choose the required database, giving you the
+                  flexibility to build a versatile and scalable application
+                  tailored to your needs.
+                </p>
                 <div className="bg-gray-500 bg-opacity-40 p-6 rounded-lg flex justify-between my-4">
                   <div>
                     <p className="font-bold text-lg">noex new my-app</p>
@@ -69,33 +81,12 @@ const Home = () => {
                 </div>
               </div>
               <div className="lg:mx-10 xs:mx-0 my-4">
-                <p className="text-lg">Setup NOEX Application:</p>
-                <div className="bg-gray-500 bg-opacity-40 p-6 rounded-lg flex justify-between my-4">
-                  <div>
-                    <p className="font-bold text-lg">noex init</p>
-                    <p className="text-lg">cd Blog</p>
-                    <p className="text-lg">noex init</p>
-                  </div>
-                  <div>
-                    <button
-                      className=" hover:text-primary"
-                      onClick={() => handleCopy("noex init")}
-                    >
-                      <MdOutlineContentCopy className="text-xl" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div className="lg:mx-10 xs:mx-0 my-4">
-                <p className="text-lg">
-                  Create new module in MongoDB or MYSQL:
-                </p>
+                <p className="text-lg">Create new module:</p>
                 <div className="bg-gray-500 bg-opacity-40 p-6 rounded-lg flex justify-between my-4">
                   <div>
                     <p className="font-bold text-lg">
                       noex generate module-name
                     </p>
-                    <p className="text-md">Select Database (MongoDB/MySQL)</p>
                     <p className="text-lg">eg: noex generate post</p>
                   </div>
                   <div>

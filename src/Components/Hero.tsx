@@ -100,7 +100,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="https://github.com/sixbeeshades/nox_framework_v2_mongo"
+              href="https://github.com/sixbeeshades/nox_framework_v2"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 btn btn-noex-white-outline"
