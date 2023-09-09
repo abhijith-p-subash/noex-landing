@@ -2,8 +2,9 @@
 import { Fragment, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { SiBuymeacoffee } from "react-icons/si";
+import { BiStore } from "react-icons/bi";
 
-import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import { NavLink } from "../Contants/Constant";
@@ -67,6 +68,17 @@ const Navbar = () => {
                       className="flex items-center bg-primary p-2 rounded-lg text-xs"
                     >
                       <SiBuymeacoffee /> <p>Buy Me a Coffee</p>
+                    </a>
+                  </div>
+                </div>
+                <div className="ml-2">
+                  <div className="flex space-x-4">
+                    <a
+                      href="https://noex-store.blinkstore.in"
+                      target="_blank"
+                      className="flex items-center bg-primary p-2 rounded-lg text-xs"
+                    >
+                      <BiStore /> <p>STORE</p>
                     </a>
                   </div>
                 </div>

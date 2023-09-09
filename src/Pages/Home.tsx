@@ -2,6 +2,7 @@
 import { SiBuymeacoffee } from "react-icons/si";
 import { MdOutlineContentCopy } from "react-icons/md";
 import Lottie from "lottie-react";
+import { BiStore } from "react-icons/bi";
 
 import Hero from "../Components/Hero";
 import Features from "../Components/Features";
@@ -139,7 +140,7 @@ const Home = () => {
                 Please, consider supporting us!
               </p>
             </div>
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center gap-2">
               <a
                 href="https://www.buymeacoffee.com/abhijithpsubash"
                 target="_blank"
@@ -147,32 +148,14 @@ const Home = () => {
               >
                 <SiBuymeacoffee className="text-lg" /> Buy Me a Coffee
               </a>
+              <a
+                href="https://noex-store.blinkstore.in"
+                target="_blank"
+                className="flex items-center bg-primary btn"
+              >
+                <BiStore className="text-lg" /> <p> STORE</p>
+              </a>
             </div>
-            {/* <div className="grid grid-cols-3 gap-6">
-              <div className="">
-                <img
-                  src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80"
-                  alt=""
-                />
-              </div>
-              <div className="lg:col-span-2 xs:col-span-3">
-                <h1 className="font-bold lg:text-4xl xs:text-3xl">
-                  The open source platform designed for the future. Build
-                  enterprise.
-                </h1>
-                <div className="my-6">
-                  <p className="text-lg">
-                    A complete development kit for building scalable server-side
-                    apps. Contact us to find out more about expertise
-                    consulting, on-site enterprise support, trainings, and
-                    private sessions.
-                  </p>
-                  <button className="btn btn-primary-outline my-4">
-                    Contact Us
-                  </button>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
