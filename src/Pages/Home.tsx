@@ -12,6 +12,7 @@ import { useState } from "react";
 
 const Home = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const imgUrl = `${process.env.PUBLIC_URL}/assets/noex-g.webp`;
   const [copy, setCopy] = useState(false);
   const handleCopy = (cmd: string) => {
     navigator.clipboard.writeText(cmd);
